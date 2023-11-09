@@ -1,0 +1,12 @@
+:host {
+    --sds-c-card-color-background: #009DDC;
+}
+.custom-large-avatar {
+    width: 100px;
+    height: 100px;
+}
+
+.custom-utility-icon{
+    padding: 0.2rem;
+    border-radius: 50%;
+}

@@ -1,0 +1,78 @@
+<template>
+    <div class="slds-card slds-text-color_inverse">
+        <div class="slds-card__header">
+            <div class="slds-media slds-media_center">
+                <div class="slds-media__figure">
+                    <div class="slds-avatar slds-avatar_circle custom-large-avatar">
+                        <img src={photoUrl} alt="Contact Photo"/>
+                    </div>
+                    <span class="slds-assistive-text">Photo from contact.</span>
+                </div>
+                <div class="slds-media__body slds-has-flexi-truncate">
+                    <div class="slds-truncate slds-text-heading_large" title={name}>{name}</div>
+                    <div class="slds-text-body_regular">{cityState}</div>
+                </div>
+            </div>
+        </div>
+
+        <template lwc:if={contact.data}>
+            <div style="color:white" class="slds-card__body slds-card__body_inner">
+                <div class="slds-media slds-media_center">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-current-color">
+                            <svg class="slds-icon slds-icon_small">
+                                <use xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#contact"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Contact ID icon.</span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-text-heading_small">Customer ID: <b>{recordId}</b></div>
+                    </div>
+                </div>
+
+                <div class="slds-media slds-media_center">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-current-color ">
+                            <svg class="slds-icon custom-utility-icon slds-icon_small">
+                                <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#email"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Contact ID icon.</span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-text-heading_small">E-mail: <b>{email}</b></div>
+                    </div>
+                </div>
+
+                <div class="slds-media slds-media_center">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-current-color">
+                            <svg class="slds-icon custom-utility-icon slds-icon_small">
+                                <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#phone_portrait"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Mobile phone in portrait direction icon.</span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-text-heading_small">Phone number: <b>{phoneNumber}</b></div>
+                    </div>
+                </div>
+
+                <div class="slds-media slds-media_center">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-current-color">
+                            <svg class="slds-icon custom-utility-icon slds-icon_small">
+                                <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#checkin"></use>
+                            </svg>
+                             <span class="slds-assistive-text">Geolocation icon.</span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-text-heading_small">Address: <b>{mailingAddress}</b></div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>
